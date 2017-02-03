@@ -2,7 +2,7 @@ from math import sqrt
 def square_or_square_root(arr):
   l=[]
   for i in arr:
-    if int(sqrt(i)) == (i** (1/2) ):
+    if int(sqrt(i)) == (i** (1/2) ): #FInds if a number is perfect square or not
       l.append(int(sqrt(i)))
     else:
       l.append(i**2)
