@@ -1,0 +1,15 @@
+def to_camel_case(text):
+  if text=="":
+      return ""
+  elif "-" in text:
+      text=text.split('-')
+      text[1]=text[1][0].upper() + text[1][1:]
+      text[2]=text[2][0].upper() + text[2][1:]
+      text=''.join(text)
+      return text
+  elif "_" in text:
+      text=text.split('_')
+      text[1]=text[1][0].upper() + text[1][1:]
+      text[2]=text[2][0].upper() + text[2][1:]
+      text=''.join(text)
+      return text
