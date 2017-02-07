@@ -4,19 +4,19 @@ def to_camel_case(text):
       return ""
   elif ("-" in text and "_" in text):
       text= re.split('-|_', text)
-      text[1]=text[1][0].upper() + text[1][1:]
-      text[2]=text[2][0].upper() + text[2][1:]
+      for i in range(len(text)-1,0,-1):
+          text[i]=text[i][0].upper() + text[i][1:]
       text="".join(text)
       return text
   elif "-" in text:
       text=text.split('-')
-      text[1]=text[1][0].upper() + text[1][1:]
-      text[2]=text[2][0].upper() + text[2][1:]
+      for i in range(len(text)-1,0,-1):
+          text[i]=text[i][0].upper() + text[i][1:]
       text=''.join(text)
       return text
   elif "_" in text:
       text=text.split('_')
-      text[1]=text[1][0].upper() + text[1][1:]
-      text[2]=text[2][0].upper() + text[2][1:]
+      for i in range(len(text)-1,0,-1):
+          text[i]=text[i][0].upper() + text[i][1:]
       text=''.join(text)
       return text
