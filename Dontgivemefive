@@ -1,0 +1,15 @@
+def function(a,b):
+  l=[]
+  for i in range(a,b+1):
+    l.append(i)
+  a=[]
+  for m in l:
+    m=str(m)
+    if '5' in m:
+      continue
+    else:
+      m=int(m)
+      a.append(m)
+  return a 
+
+print ( function(1,15) )
