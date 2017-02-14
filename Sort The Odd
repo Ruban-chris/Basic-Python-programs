@@ -1,0 +1,13 @@
+def sort_array(source_array):
+  l=[x for x in source_array if x%2==1]
+  l.sort()
+  m=0
+  for i in range(len(source_array)):
+    if source_array[i] %2 ==1:
+      source_array[i] = l[m]
+      m+=1
+  return (source_array)
+
+sort_array([2,5,4,3,6]) 
+
+#Puts the even number in the given list as usual. and sorts the odd numbers in ascending order.
