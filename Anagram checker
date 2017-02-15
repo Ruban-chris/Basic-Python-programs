@@ -1,0 +1,29 @@
+def function(a,b):
+  
+  a=a.split(" ")
+  a="".join(a)
+  a=a.lower()
+  b=b.split(" ")
+  b="".join(b)
+  b=b.lower()
+  if len(a) != len(b):
+    return False
+  else:
+    dict={}
+    for i in a:
+      if i not in dict:
+        dict[i] = 1 
+      else:
+        dict[i]+=1
+    for i in b:
+      if i not in dict:
+        return False
+      elif i in dict:
+        dict[i]-=1
+    for (k,v) in dict.items():
+      if v!=0:
+        return False
+      else:
+        return True
+    
+print( function("I ceman", "iCe man"))
