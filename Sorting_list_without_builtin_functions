@@ -1,0 +1,33 @@
+def function(a):
+  min=a[0]
+  for x in a:
+    if x<min:
+      min=x
+  return min
+
+def main_function(unsorted_list):
+  final_list=[]
+  
+  minimum = function(unsorted_list)
+  unsorted_list.remove(minimum)
+  final_list.append(minimum)
+  
+  minimum = function(unsorted_list)
+  unsorted_list.remove(minimum)
+  final_list.append(minimum)
+  
+  minimum = function(unsorted_list)
+  unsorted_list.remove(minimum)
+  final_list.append(minimum)
+  
+  minimum = function(unsorted_list)
+  unsorted_list.remove(minimum)
+  final_list.append(minimum)
+  
+  minimum = function(unsorted_list)
+  unsorted_list.remove(minimum)
+  final_list.append(minimum)
+  
+  return final_list
+print( main_function([-5,2,13,4,1]))  
+
