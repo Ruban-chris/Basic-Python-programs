@@ -4,3 +4,11 @@ def function(a,b):
   common=[x for x in factorsofb if x in factorsofa]
   return (max(common))
 print(function(10,15))
+
+Efficient one:
+
+def function(a,b):
+  for x in range(a,0,-1):
+    if b%x ==0 and a%x ==0:
+      return x 
+print(function(100,120))
