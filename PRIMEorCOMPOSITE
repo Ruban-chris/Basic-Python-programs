@@ -4,3 +4,23 @@ def function(a):
       return "Composite"
   return "Prime"
 print( function(14) ) ##Composite
+
+A bit COmplex
+
+def function(given_number):
+  prime=[]
+  for i in range( given_number[0],given_number[1]+1 ):
+    if i==1:
+      prime.append(1)
+    elif i==2:
+      prime.append(2)
+    else:
+      for m in range(2,i): #m=2 #i=3
+        if i%m ==0:
+          break
+        elif m==i-1:
+          prime.append(i)
+  return prime
+print( function([5,20]))
+
+
