@@ -1,0 +1,16 @@
+def function(a):
+  number = abs(a)
+  if ( len(str(bin(number))[2:] )) > 32:
+    return 0
+  else:
+    rem = 0
+    power = len(str(number))-1
+    while number>0:
+      rem += (number % 10) * (10 ** power)
+      number = number//10 
+      power-=1
+    if a <0:
+      rem = -rem 
+    return rem
+
+print(function(2512))
