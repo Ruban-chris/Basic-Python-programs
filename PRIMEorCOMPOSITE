@@ -5,22 +5,17 @@ def function(a):
   return "Prime"
 print( function(14) ) ##Composite
 
-A bit COmplex
+A bit COmplex. To find prime numbers below n
 
-def function(given_number):
-  prime=[]
-  for i in range( given_number[0],given_number[1]+1 ):
-    if i==1:
-      prime.append(1)
-    elif i==2:
-      prime.append(2)
-    else:
-      for m in range(2,i): #m=2 #i=3
-        if i%m ==0:
-          break
-        elif m==i-1:
-          prime.append(i)
-  return prime
-print( function([5,20]))
-
+def prime_finder(number):
+  dict = {x:0 for x in range(2,number+1)}
+  for k,v in dict.items(): #k=3 #v=0
+    for i in range(2,k): #i=2 for k=3
+      if k%i == 0:
+        v+=1
+        dict[k] = v
+  for k,v in dict.items():
+    if v==0:
+      print(k)
+print( prime_finder(50))
 
