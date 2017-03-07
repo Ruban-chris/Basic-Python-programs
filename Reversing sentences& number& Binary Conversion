@@ -14,3 +14,17 @@ def function(a):
     return rem
 
 print(function(2512))
+
+def reverse(sentence):
+  final =""
+  s=""
+  for letter in sentence[len(sentence)-1::-1]:
+    if letter != " " :
+      final =final + letter
+    else:
+      s += final[-1::-1] + " " 
+      final=""
+  return s
+print(reverse(" I am Kishor Subedi")) 
+
+
