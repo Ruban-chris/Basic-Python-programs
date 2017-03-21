@@ -1,0 +1,35 @@
+def converter(a):
+  r=a%2
+  s=""
+  while a>0:
+    r=a%2
+    s=str(r)+s 
+    a=a//2
+  return s 
+
+def add_binary(a,b):
+    return converter(a+b) #your code here
+
+  def bin_to_dec(binary):
+  summ=0
+  i=0
+  while binary >0:
+    rem = binary %10 
+    summ += rem * ( 2 ** i)
+    binary = binary//10
+    i+=1 
+  return summ  
+  
+print(bin_to_dec(101011))
+
+
+def dec_to_bin(decimal):
+  summ = 0
+  power=0
+  while decimal > 0 :
+    rem = decimal %2 
+    summ += 10 ** power * rem 
+    decimal //= 2 
+    power+=1
+  return summ
+print( dec_to_bin(43))
