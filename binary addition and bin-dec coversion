@@ -33,3 +33,27 @@ def dec_to_bin(decimal):
     power+=1
   return summ
 print( dec_to_bin(43))
+
+Hexadecimal to Decimal
+
+def hex_to_dec(hex_number):
+  summ = 0
+  power = 0
+  for i in hex_number[::-1]:
+    if i == 'A':
+      i = 10 
+    elif i == 'B':
+      i = 11 
+    elif i == 'C':
+      i = 12 
+    elif i == 'D':
+      i = 13 
+    elif i == 'E':
+      i = 14 
+    elif i == 'F':
+      i == 15
+    summ += int(i) * 16 ** power
+    power += 1 
+  return summ  
+  
+print(hex_to_dec("A"))
